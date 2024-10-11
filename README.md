@@ -19,7 +19,3 @@ The following Python libraries are required:
 - `pandas`
 - `matplotlib`
 - `networkx`
-
-You can install the necessary libraries by running:
-```bash
-pip install pandas matplotlib networkx
