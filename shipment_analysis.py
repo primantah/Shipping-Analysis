@@ -176,12 +176,15 @@ for node, out_degree, in_degree, total_degree in sorted_degree_info:
 # ---------------------------
 # Insights
 # ---------------------------
-# 1. All ports have the same number of departures, which is 2 for each port.
-#    Therefore, the code highlights the first 5 ports it detects as the top departure ports.
-# 2. Each cargo type (Bulk Liquids, Frozen Meat, Refrigerated Goods, Grain, Processed Foods, Rice, Soybeans, Vegetables, Fruits, and Corn)
-#    accounts for 10% of the total shipments.
-# 3. Dubai and Los Angeles are the most active ports, each with a degree of 5.
-#    Following them are Rotterdam, Hamburg, Antwerp, Tianjin, Shanghai, and Busan, each with a degree of 4.
-#    Therefore, the code highlights the top 2 ports with a degree of 5 and 5 ports with a degree of 4.
-# 4. Each edge has a weight of 1, indicating that there is a single shipment between each pair of ports.
-#    This suggests a balanced network where each route is used equally, with no port or route being overly dominant in terms of shipment frequency.
+# 1. Each port has exactly 2 shipments, indicating an equal distribution of the shipping load across all ports in the dataset.
+#	 There is no dominant port in terms of departures, and the top 5 ports are highlighted based on their detection order rather than volume.
+#	 The chart also shows a global distribution of ports across Europe, Asia, the Middle East, and North America, reflecting a well-balanced global shipping network.
+# 2. All cargo types—Bulk Liquids, Corn, Fruits, Vegetables, Soybeans, Rice, Processed Foods, Grain, Refrigerated Goods, and Frozen Meat—make up an equal share (10%) of the total shipments.
+#	 This indicates a balanced variety of goods, with no emphasis on any single type, serving industries like agriculture, food processing, and energy
+#	 The inclusion of temperature-controlled goods (Frozen Meat, Refrigerated Goods) suggests the network supports such shipments, highlighting the importance of speed and efficiency.
+#	 This equal distribution may also reflect a strategy to reduce risk by diversifying the cargo base, making operations more resilient to market disruptions.
+# 3. Dubai and Los Angeles are the most active ports, with 5 connections to other key ports, highlighting their role as central hubs in the shipping network.
+#	 Hamburg, Rotterdam, Antwerp, Tianjin, and Shanghai also play significant roles with 4 connections, reinforcing their importance in global shipping.
+#	 Each edge has a weight of 1, indicating only one shipment between each pair of connected ports, suggesting that no single route is heavily trafficked.
+#	 Each port has exactly 2 shipments, indicating an equal distribution of the shipping load across all ports in the dataset.
+#	 The chart also shows a global distribution of ports across Europe, Asia, the Middle East, and North America, reflecting a well-balanced global shipping network.
